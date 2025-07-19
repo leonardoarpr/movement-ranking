@@ -13,7 +13,7 @@ class MovementController extends AbstractController
         private readonly GetMovementRanking $useCase
     ) {}
     #[Route('/ranking', name: 'ranking', methods: ['GET'])]
-    public function ranking()
+    public function ranking(): JsonResponse
     {
         $movement = $_GET['movement'] ?? null;
         $id = $_GET['id'] ?? null;

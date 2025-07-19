@@ -3,4 +3,5 @@
 - Docker compose v2
 ### How use
 - Run command `make docker-install`.
-- 
+
+## see /docs for more information
