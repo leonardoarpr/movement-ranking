@@ -1,0 +1,35 @@
+{
+    "name": "app/movement-ranking",
+    "description": "assessment project",
+    "type": "project",
+    "require": {
+        "php": ">=8.3",
+        "illuminate/database": "^12.20",
+        "sunrise/http-message": "^3.7",
+        "symfony/framework-bundle": "^7.3",
+        "symfony/routing": "^6.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "./"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "start": "php -S localhost:9000 -t public",
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require-dev": {
+        "phpunit/phpunit": "^12.2"
+    }
+}

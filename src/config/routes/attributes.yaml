@@ -1,0 +1,13 @@
+controllers:
+  resource:
+    path: ../../infrastructure/Http/Controllers/
+    namespace: App\Http\Controller
+  type: attribute
+
+kernel:
+  resource: App\Kernel
+  type: attribute
+
+ranking:
+  path: /ranking
+  controller: App\Infrastructure\Http\Controllers\RankingController::ranking
