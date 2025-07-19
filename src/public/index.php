@@ -28,6 +28,7 @@ try {
     $response = $parameters['_controller']();
     echo $response;
 } catch (MethodNotAllowedException $e) {
+    http_response_code(405);
     echo "Method Not Allowed";
     exit;
 } catch (ResourceNotFoundException $e) {
