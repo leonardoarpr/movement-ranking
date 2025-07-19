@@ -1,0 +1,36 @@
+{
+	"info": {
+		"_postman_id": "99c18888-5904-4951-bc38-6cf534ba17d4",
+		"name": "store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/ranking",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/ranking?movement=&id=1",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"ranking"
+					],
+					"query": [
+						{
+							"key": "movement",
+							"value": ""
+						},
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

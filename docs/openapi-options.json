@@ -1,0 +1,11 @@
+{
+    "servers": [
+        {
+            "url": "http://localhost:8080/",
+            "description": "Local environment"
+        }
+    ],
+    "disabledParams": {
+        "includeQuery": true
+    }
+}
