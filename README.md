@@ -4,6 +4,8 @@
 ### How use
 - Run command `make docker-install`.
 
-## See `/docs` for more information
+## See
+- `/docs` for more information
 
-## RUN tests with `make docker-test`
+## RUN tests 
+- `make docker-test`

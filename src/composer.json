@@ -7,7 +7,7 @@
         "illuminate/database": "^12.20",
         "sunrise/http-message": "^3.7",
         "symfony/framework-bundle": "^7.3",
-        "symfony/routing": "^6.4"
+        "symfony/routing": "^7.3"
     },
     "autoload": {
         "psr-4": {

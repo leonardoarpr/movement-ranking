@@ -21,16 +21,87 @@
 					"query": [
 						{
 							"key": "movement",
-							"value": ""
+							"value": "",
+							"description": "movement name"
 						},
 						{
 							"key": "id",
-							"value": "1"
+							"value": "1",
+							"description": "movement id"
 						}
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/ranking?movement=&id=1",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"ranking"
+							],
+							"query": [
+								{
+									"key": "movement",
+									"value": "",
+									"description": "movement name"
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"description": "movement id"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Not Found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/ranking?movement=&id=11",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"ranking"
+							],
+							"query": [
+								{
+									"key": "movement",
+									"value": "",
+									"description": "movement name"
+								},
+								{
+									"key": "id",
+									"value": "11",
+									"description": "movement id"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
 		}
 	]
 }

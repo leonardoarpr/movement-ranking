@@ -16,13 +16,25 @@ paths:
           in: query
           schema:
             type: string
+          description: movement name
         - name: id
           in: query
           schema:
             type: integer
+          description: movement id
           example: '1'
       responses:
         '200':
-          description: Successful response
+          description: OK
           content:
-            application/json: {}
+            text/plain:
+              schema:
+                type: string
+              example: Will return the ranking of the movements.
+        '404':
+          description: Not Found
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: Will return an error if the movement is not found.
