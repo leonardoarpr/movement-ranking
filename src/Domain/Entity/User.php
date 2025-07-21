@@ -10,6 +10,10 @@ class User extends Model
     protected $table = 'user';
     public $timestamps = false;
 
+    public $columns = [
+        'id',
+        'name'
+    ];
     public function personalRecords(): HasMany
     {
         return $this->hasMany(PersonalRecord::class);
