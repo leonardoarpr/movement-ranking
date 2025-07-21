@@ -12,7 +12,7 @@ require_once __DIR__ . '/../config/env.php';
 
 loadEnv(__DIR__ . '/../.env');
 
-require_once __DIR__ . '/../config/bootstrap.php';
+require_once __DIR__ . '/../Infrastructure/DB/connection.php';
 $routes = require __DIR__ . '/../Routes.php';
 
 $context = new RequestContext();
