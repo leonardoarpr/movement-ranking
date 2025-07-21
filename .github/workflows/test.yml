@@ -17,12 +17,12 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Validate composer.json and composer.lock
-      run: composer validate --strict
+      run: composer --working-dir=src validate --strict
 
     - name: Set up PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.2'
+        php-version: '8.3'
         extensions: mbstring, dom, xml
         coverage: none
 
@@ -30,13 +30,13 @@ jobs:
       id: composer-cache
       uses: actions/cache@v3
       with:
-        path: vendor
+        path: src/vendor
         key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
         restore-keys: |
           ${{ runner.os }}-php-
 
     - name: Install dependencies
-      run: composer install --prefer-dist --no-progress
+      run: composer --working-dir=src install --prefer-dist --no-progress
 
     - name: Run tests
-      run: composer run-script test
+      run: composer --working-dir=src run-script test
