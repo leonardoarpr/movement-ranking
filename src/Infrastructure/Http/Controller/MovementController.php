@@ -23,7 +23,7 @@ class MovementController extends AbstractController
         }
 
         try {
-            $response = $this->useCase->execute($id, $movement);
+            $response = $this->useCase->getRanking($id, $movement);
             return (new JsonResponse($response))->send();
         } catch (NotFoundHttpException $e) {
             return (new JsonResponse(['error' => $e->getMessage()], 404))->send();

@@ -12,7 +12,7 @@ class GetMovementRanking
         private MovementRepositoryInterface $repository
     ) {}
 
-    public function execute(?int $id, ?string $movement): array
+    public function getRanking(?int $id, ?string $movement): array
     {
         /** @param PersonalRecordRankingDTO[] $ranking  */
         $ranking = $this->repository->getMovement($id, $movement);
@@ -27,9 +27,9 @@ class GetMovementRanking
             if ($i == 0) continue;
             if ($record->personalRecord === $ranking[$key][$i - 1]->personalRecord) {
                 $record->rankingPosition = $record->rankingPosition -1;
-            }else{
-                $record->rankingPosition = ++$count;
+                continue;
             }
+                $record->rankingPosition = ++$count;
         }
 
         return $ranking;
