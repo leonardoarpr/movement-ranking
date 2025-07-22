@@ -22,7 +22,7 @@ class MovementRankingTest extends TestCase
             ]]);
 
         $useCase = new GetMovementRanking($mockRepository);
-        $result = $useCase->execute(1, null);
+        $result = $useCase->getRanking(1, null);
 
         $this->assertCount(4, $result['test']);
         $this->assertEquals(1, $result['test'][0]->rankingPosition);
