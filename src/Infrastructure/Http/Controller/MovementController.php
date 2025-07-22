@@ -27,8 +27,8 @@ class MovementController extends AbstractController
             return (new JsonResponse($response))->send();
         } catch (NotFoundHttpException $e) {
             return (new JsonResponse(['error' => $e->getMessage()], 404))->send();
-        } catch (\Exception $e) {
-            return (new JsonResponse(['error' => $e->getMessage()], 500))->send();
+        } catch (\Exception) {
+            return (new JsonResponse(['error' => 'Wild error appear'], 500))->send();
         }
     }
 }

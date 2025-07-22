@@ -15,7 +15,7 @@ class GetMovementRanking
     public function getRanking(?int $id, ?string $movement): array
     {
         /** @param PersonalRecordRankingDTO[] $ranking  */
-        $ranking = $this->repository->getMovement($id, $movement);
+        $ranking = $this->repository->getMovementRanking($id, $movement);
         if(empty($ranking)) {
             throw new NotFoundHttpException('No records found for the given movement name or id');
         }

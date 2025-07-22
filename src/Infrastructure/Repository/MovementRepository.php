@@ -10,7 +10,7 @@ use Illuminate\Support\Collection;
 
 class MovementRepository implements MovementRepositoryInterface
 {
-    public function getMovement(?int $id, ?string $movement): array
+    public function getMovementRanking(?int $id, ?string $movement): array
     {
         $query = PersonalRecord::with(['user', 'movement'])
             ->select('id', 'user_id', 'movement_id', Capsule::raw('MAX(value) as max_value'), 'date');

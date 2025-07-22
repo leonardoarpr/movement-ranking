@@ -4,5 +4,5 @@ namespace App\Application\Interface;
 
 interface MovementRepositoryInterface
 {
-    public function getMovement(?int $id, ?string $movement): array;
+    public function getMovementRanking(?int $id, ?string $movement): array;
 }

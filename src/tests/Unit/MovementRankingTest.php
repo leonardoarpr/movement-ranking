@@ -13,7 +13,7 @@ class MovementRankingTest extends TestCase
     {
         $mockRepository = $this->createMock(MovementRepositoryInterface::class);
 
-        $mockRepository->method('getMovement')
+        $mockRepository->method('getMovementRanking')
             ->willReturn(['test' => [
                 new PersonalRecordRankingDTO(userName: 'Alice', personalRecord: 100.0, rankingPosition: 1, recordDate: '2024-01-01'),
                 new PersonalRecordRankingDTO(userName: 'Bob', personalRecord: 100.0, rankingPosition: 2, recordDate: '2024-01-02'),
