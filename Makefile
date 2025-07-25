@@ -10,7 +10,7 @@ COMMAND=docker compose
 docker-install: docker-build docker-up docker-composer-install
 
 docker-up:
-	$(COMMAND) up
+	$(COMMAND) up -d
 
 docker-down:
 	$(COMMAND) down

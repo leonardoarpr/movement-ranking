@@ -10,8 +10,6 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 COPY src .
 
-RUN composer install --optimize-autoloader
-
 RUN chown -R $USER:www-data /var/www
 
 EXPOSE 9000
