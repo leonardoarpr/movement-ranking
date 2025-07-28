@@ -1,11 +1,11 @@
 <?php
 namespace App\Infrastructure\Http\Controller;
 
-use App\Application\UseCase\GetMovementRanking;
+use App\Domain\UseCase\GetMovementRanking;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class MovementController extends AbstractController
 {

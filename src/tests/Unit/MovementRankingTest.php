@@ -4,7 +4,7 @@ namespace App\tests\Unit;
 
 use App\Application\dto\PersonalRecordRankingDTO;
 use App\Application\Interface\MovementRepositoryInterface;
-use App\Application\UseCase\GetMovementRanking;
+use App\Domain\UseCase\GetMovementRanking;
 use PHPUnit\Framework\TestCase;
 
 class MovementRankingTest extends TestCase
